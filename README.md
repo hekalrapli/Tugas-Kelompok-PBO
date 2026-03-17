@@ -1,1 +1,1 @@
-Repositry Tugas Kelompok Pemrogaman Berorientasi Objek
+Repository Tugas Kelompok Pemrogaman Berorientasi Objek
