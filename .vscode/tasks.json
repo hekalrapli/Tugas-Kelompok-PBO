@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build and Run",
+      "type": "shell",
+      "command": "cd ${fileDirname} ; g++ -o ${fileBasenameNoExtension}.exe ${file} -I ${workspaceFolder}\\dependencies\\include -L ${workspaceFolder}\\dependencies\\lib -lfreeglut -lopengl32 -lglu32 ; .\\${fileBasenameNoExtension}.exe",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": "$gcc"
+    }
+  ]
+}
