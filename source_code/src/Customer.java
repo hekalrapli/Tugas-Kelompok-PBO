@@ -6,8 +6,10 @@ public class Customer {
   private java.util.List<Loan> loan;
 
   /* Konstruktor */
-  public Customer(String customerId) {
-    this.customerId  = customerId;
+  public Customer(String customerId, String email, String phone) {
+    this.customerId = customerId;
+    this.email = email;
+    this.phone = phone;
     this.loan = new java.util.ArrayList<>();
   }
 
@@ -37,14 +39,6 @@ public class Customer {
     this.name = name;
   }
 
-  public void setEmail(String email) {
-    this.email = email;
-  }
-
-  public void setPhone(String phone) {
-    this.phone = phone;
-  }
-
   /* Method Tambahan */
   public void updateContact(String newEmail) {
     this.email = newEmail;
@@ -58,5 +52,13 @@ public class Customer {
 
   public void addLoan(Loan l) {
     loan.add(l);
+  }
+
+  public float totalLoan() {
+    float totAmount = 0;
+    for(Loan l : loan) {
+      totAmount += l.getAmount();
+    }
+    return totAmount;
   }
 }

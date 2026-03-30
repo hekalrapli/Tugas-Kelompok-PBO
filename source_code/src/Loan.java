@@ -8,9 +8,14 @@ public class Loan {
   private Customer customer;
 
   /* Konstruktor */
-  public Loan(String loanId, Customer customer) {
+  public Loan(String loanId, float amount, Customer customer, int termMonths, java.util.Date startDate, float interestRate) {
     this.loanId = loanId;
+    this.amount = amount;
     this.customer = customer;
+    this.termMonths = termMonths;
+    this.startDate = startDate;
+    this.interestRate = interestRate;
+    this.status = "Aktif";
   }
 
   /* Selektor */
@@ -41,28 +46,6 @@ public class Loan {
   public Customer getCustomer() {
     return customer;
   }
-
-  /* Mutator */
-  public void setAmount(float amount) {
-    this.amount = amount;
-  }
-
-  public void setInterestRate(float interestRate) {
-    this.interestRate = interestRate;
-  }
-
-  public void setTermMonths(int termMonths) {
-    this.termMonths = termMonths;
-  }
-
-  public void setStartDate(java.util.Date startDate) {
-    this.startDate = startDate;
-  }
-
-  public void setStatus(String status) {
-    this.status = status;
-  }
-
 
   /* Method Tambahan */
   public float calculateMonthlyPayment() {
