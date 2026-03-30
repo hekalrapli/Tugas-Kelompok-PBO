@@ -3,12 +3,12 @@ public class Customer {
   private String name;
   private String email;
   private String phone;
+  private java.util.List<Loan> loan;
 
   /* Konstruktor */
-  public Customer() {}
-
   public Customer(String customerId) {
     this.customerId  = customerId;
+    this.loan = new java.util.ArrayList<>();
   }
 
   /* Selektor */
@@ -28,9 +28,11 @@ public class Customer {
     return phone;
   }
 
+  public java.util.List<Loan> getLoan() {
+    return loan;
+  }
+
   /* Mutator */
-
-
   public void setName(String name) {
     this.name = name;
   }
@@ -48,8 +50,13 @@ public class Customer {
     this.email = newEmail;
   }
 
+  //Overloading
   public void updateContact(String newEmail, String newPhone) {
     this.email = newEmail;
     this.phone = newPhone;
+  }
+
+  public void addLoan(Loan l) {
+    loan.add(l);
   }
 }

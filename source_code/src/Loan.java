@@ -5,9 +5,13 @@ public class Loan {
   private int termMonths;
   private java.util.Date startDate;
   private String status;
+  private Customer customer;
 
   /* Konstruktor */
-  public Loan(){};
+  public Loan(String loanId, Customer customer) {
+    this.loanId = loanId;
+    this.customer = customer;
+  }
 
   /* Selektor */
   public String getLoanId() {
@@ -34,11 +38,11 @@ public class Loan {
     return status;
   }
 
-  /* Mutator */
-  public void setLoanId(String loanId) {
-    this.loanId = loanId;
+  public Customer getCustomer() {
+    return customer;
   }
 
+  /* Mutator */
   public void setAmount(float amount) {
     this.amount = amount;
   }
@@ -58,6 +62,7 @@ public class Loan {
   public void setStatus(String status) {
     this.status = status;
   }
+
 
   /* Method Tambahan */
   public float calculateMonthlyPayment() {
