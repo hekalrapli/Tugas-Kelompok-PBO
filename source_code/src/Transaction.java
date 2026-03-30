@@ -38,13 +38,7 @@ public Transaction(String id, LocalDate date, double amount, String type) {
         return this.type;
     }
 
-    /*Mutator */
-    public void setDate(LocalDate date) {
-         this.date = date;
-    }
-    public void setType(String type) {
-         this.type = type;
-    }
+
     
     public void printReceipt() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MMMM yyyy");

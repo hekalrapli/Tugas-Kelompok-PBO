@@ -31,7 +31,7 @@ public abstract class Account {
         return this.balance;
     }
 
-    /*Mutator */
+
  
     public void deposit(double amount) throws Exception {
         if(amount <=0) {
