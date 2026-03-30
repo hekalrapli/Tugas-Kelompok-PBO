@@ -10,6 +10,10 @@ public class Customer {
     this.loan = new java.util.ArrayList<>();
   }
 
+  public Customer(String customerId) {
+    this.customerId  = customerId;
+  }
+
   /* Selektor */
   public String getCustomerId() {
     return customerId;
@@ -32,9 +36,7 @@ public class Customer {
   }
 
   /* Mutator */
-  public void setCustomerId(String customerId) {
-    this.customerId = customerId;
-  }
+
 
   public void setName(String name) {
     this.name = name;
