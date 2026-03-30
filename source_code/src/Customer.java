@@ -6,12 +6,9 @@ public class Customer {
   private java.util.List<Loan> loan;
 
   /* Konstruktor */
-  public Customer() {
-    this.loan = new java.util.ArrayList<>();
-  }
-
   public Customer(String customerId) {
     this.customerId  = customerId;
+    this.loan = new java.util.ArrayList<>();
   }
 
   /* Selektor */
@@ -36,8 +33,6 @@ public class Customer {
   }
 
   /* Mutator */
-
-
   public void setName(String name) {
     this.name = name;
   }

@@ -8,7 +8,8 @@ public class Loan {
   private Customer customer;
 
   /* Konstruktor */
-  public Loan(Customer customer) {
+  public Loan(String loanId, Customer customer) {
+    this.loanId = loanId;
     this.customer = customer;
   }
 
@@ -42,10 +43,6 @@ public class Loan {
   }
 
   /* Mutator */
-  public void setLoanId(String loanId) {
-    this.loanId = loanId;
-  }
-
   public void setAmount(float amount) {
     this.amount = amount;
   }
