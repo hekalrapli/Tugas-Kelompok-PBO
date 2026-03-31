@@ -46,13 +46,9 @@ public abstract class Account {
         if (amount <= 0) {
             throw new Exception("Nominal penarikan harus lebih dari nol");
         }
-        
-        if (amount > this.balance) {
-            throw new Exception("Saldo tidak cukup.");
-        }
 
         this.balance -= amount;
-         transactions.add(new Transaction("T" + Instant.now().getEpochSecond(), LocalDate.now(),amount,"Withdraw"));
+        transactions.add(new Transaction("T" + Instant.now().getEpochSecond(), LocalDate.now(),amount,"Withdraw"));
     }
     public abstract double calculateInterest();
 

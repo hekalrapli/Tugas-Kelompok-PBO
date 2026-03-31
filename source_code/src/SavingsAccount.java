@@ -25,4 +25,12 @@ public class SavingsAccount extends Account {
     public double calculateInterest() {
         return super.getBalance() * this.interestRate; 
     }
+
+    @Override
+    public void withdraw(double amount) throws Exception {
+        if (amount > getBalance()) {
+            throw new Exception("Penarikan gagal: Saldo tidak cukup.");
+        }
+        super.withdraw(amount);
+    }
 }
