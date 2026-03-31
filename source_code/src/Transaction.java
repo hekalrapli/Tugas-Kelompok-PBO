@@ -3,7 +3,7 @@ import java.time.format.DateTimeFormatter;
 
 public class Transaction {
 
-     /* Atribut */
+    /* Atribut */
 
    private String transactionId;
    private LocalDate date;
@@ -17,7 +17,7 @@ public class Transaction {
 
         
     }
-public Transaction(String id, LocalDate date, double amount, String type) {
+    public Transaction(String id, LocalDate date, double amount, String type) {
         this.transactionId = id;
         this.date = date;
         this.amount = amount;
