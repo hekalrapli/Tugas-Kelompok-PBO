@@ -8,8 +8,8 @@ public class Branch {
         ArrayList<Customer> listCustomer;
     
         /* Konstruktor */
-        public Branch(){
-            this.branchCode = "";
+        public Branch(String branchCode){
+            this.branchCode = branchCode;
             this.branchName = "";
             this.address = "";
             this.listCustomer = new ArrayList<>();
@@ -19,6 +19,7 @@ public class Branch {
             this.branchCode = branchCode;
             this.branchName = branchName;
             this.address = address;
+            this.listCustomer = new ArrayList<>();
             this.listCustomer.add(c);
         }
     
