@@ -1,3 +1,10 @@
+/*Nama Anggota Kelompok : 
+1.Haikal Rafli Sembiring (24060124130079)
+2.Muhammad Zaidan Alfarizi(24060124130102)
+3.Mohammad Sulthon Ariefin(24060124130104)
+4.Rio Setiawan Hastanu Putra (24060124130068)
+
+*/
 import java.util.ArrayList;
 
 public class Branch {
@@ -49,4 +56,12 @@ public class Branch {
         public void addCustomer(Customer c){
             this.listCustomer.add(c);
         }
+
+        public void printAllCustomers() {
+    System.out.println("Daftar Customer di Cabang " + this.branchName + ":");
+    for (Customer c : listCustomer) {
+        // Asumsi kelas Customer punya method getNama() atau similar
+        System.out.println("- " + c.getName()); 
+    }
+}
 }

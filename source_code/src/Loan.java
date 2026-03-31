@@ -1,3 +1,11 @@
+/*Nama Anggota Kelompok : 
+1.Haikal Rafli Sembiring (24060124130079)
+2.Muhammad Zaidan Alfarizi(24060124130102)
+3.Mohammad Sulthon Ariefin(24060124130104)
+4.Rio Setiawan Hastanu Putra (24060124130068)
+
+*/
+
 public class Loan {
   private String loanId;
   private double amount;
@@ -53,13 +61,13 @@ public class Loan {
       return 0.0f;
     }
 
-    double cicilan = interestRate / 12 / 100;
-
+    
     if(interestRate == 0){
       return amount / termMonths;
     }
+    double cicilan = interestRate / 12 / 100;
     
-    return (double) (amount * cicilan / (1-Math.pow(1 - cicilan, -termMonths)));
+    return (double) (amount * cicilan / (1-Math.pow(1 - cicilan, termMonths)));
   }
 
   public void makePayment(double paymentAmount) {
