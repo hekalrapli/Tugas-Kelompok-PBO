@@ -36,10 +36,6 @@ public class Branch {
         }
     
         /* Mutator */
-        public void setBranchCode(String branchCode){
-            this.branchCode = branchCode;
-        }
-    
         public void setBranchName(String branchName){
             this.branchName = branchName;
         }
