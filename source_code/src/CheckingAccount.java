@@ -30,11 +30,6 @@ public class CheckingAccount extends Account implements IPaymentProcessor {
     }
     
     @Override
-    public double calculateInterest() {
-        return 0;
-    };
-
-    @Override
     public boolean processPayment(double amount, String billerId) {
         try {
             this.withdraw(amount);
@@ -45,5 +40,10 @@ public class CheckingAccount extends Account implements IPaymentProcessor {
             return false;
         }
     }
+
+    @Override
+    public double calculateInterest() {
+        return 0;
+    };
 
 }
