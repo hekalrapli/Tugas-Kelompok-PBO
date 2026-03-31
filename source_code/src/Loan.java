@@ -1,14 +1,14 @@
 public class Loan {
   private String loanId;
-  private float amount;
-  private float interestRate;
+  private double amount;
+  private double interestRate;
   private int termMonths;
   private java.util.Date startDate;
   private String status;
   private Customer customer;
 
   /* Konstruktor */
-  public Loan(String loanId, float amount, Customer customer, int termMonths, java.util.Date startDate, float interestRate) {
+  public Loan(String loanId, double amount, Customer customer, int termMonths, java.util.Date startDate, double interestRate) {
     this.loanId = loanId;
     this.amount = amount;
     this.customer = customer;
@@ -23,11 +23,11 @@ public class Loan {
     return loanId;
   }
 
-  public float getAmount() {
+  public double getAmount() {
     return amount;
   }
 
-  public float getInterestRate() {
+  public double getInterestRate() {
     return interestRate;
   }
 
@@ -48,21 +48,21 @@ public class Loan {
   }
 
   /* Method Tambahan */
-  public float calculateMonthlyPayment() {
+  public double calculateMonthlyPayment() {
     if(amount <= 0 || termMonths <= 0) {
       return 0.0f;
     }
 
-    float cicilan = interestRate / 12 / 100;
+    double cicilan = interestRate / 12 / 100;
 
     if(interestRate == 0){
       return amount / termMonths;
     }
     
-    return (float) (amount * cicilan / (1-Math.pow(1 - cicilan, -termMonths)));
+    return (double) (amount * cicilan / (1-Math.pow(1 - cicilan, -termMonths)));
   }
 
-  public void makePayment(float paymentAmount) {
+  public void makePayment(double paymentAmount) {
     if(paymentAmount > 0) {
       amount -= paymentAmount;
       

@@ -32,7 +32,7 @@ public Card(String cardNumber, String pin, Account account) {
         return this.linkedAccount;
     }
 
-    /*Mutator */
+  
 
 
     public boolean verifyPin(String inputPin) {

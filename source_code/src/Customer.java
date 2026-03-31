@@ -54,8 +54,8 @@ public class Customer {
     loan.add(l);
   }
 
-  public float totalLoan() {
-    float totAmount = 0;
+  public double totalLoan() {
+    double totAmount = 0;
     for(Loan l : loan) {
       totAmount += l.getAmount();
     }
