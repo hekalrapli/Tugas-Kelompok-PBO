@@ -1,3 +1,11 @@
+/*Nama Anggota Kelompok : 
+1.Haikal Rafli Sembiring (24060124130079)
+2.Muhammad Zaidan Alfarizi(24060124130102)
+3.Mohammad Sulthon Ariefin(24060124130104)
+4.Rio Setiawan Hastanu Putra (24060124130068)
+
+*/
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -9,6 +17,7 @@ public class Transaction {
    private LocalDate date;
    private double amount;
    private String type;
+   private String accountNumber;
     
    /*Method */
 
@@ -17,11 +26,13 @@ public class Transaction {
 
         
     }
-    public Transaction(String id, LocalDate date, double amount, String type) {
+    public Transaction(String id, LocalDate date, double amount, String type, String accountNumber) {
         this.transactionId = id;
         this.date = date;
         this.amount = amount;
         this.type = type;
+        this.accountNumber = accountNumber;
+
     }
 
     /*Selektor */
@@ -37,6 +48,7 @@ public class Transaction {
     public String getType() {
         return this.type;
     }
+  
 
 
     
@@ -46,10 +58,11 @@ public class Transaction {
         System.out.println("==================================");
         System.out.println("         STRUK TRANSAKSI          ");
         System.out.println("==================================");
-        System.out.println("ID Transaksi : " + this.transactionId);
-        System.out.println("Tanggal      : " + formattedDate);
-        System.out.println("Tipe         : " + this.type);
-        System.out.println("Nominal      : Rp" + String.format("%,.2f", this.amount));
+        System.out.println("ID Transaksi    : " + this.transactionId); 
+        System.out.println("Nomor Rekening  : " + this.accountNumber);
+        System.out.println("Tanggal         : " + formattedDate);
+        System.out.println("Tipe            : " + this.type);
+        System.out.println("Nominal         : Rp" + String.format("%,.2f", this.amount));
         System.out.println("==================================");
         System.out.println("   Terima Kasih Telah Bertransaksi ");
         System.out.println("==================================\n");

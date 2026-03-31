@@ -1,3 +1,12 @@
+/*Nama Anggota Kelompok : 
+1.Haikal Rafli Sembiring (24060124130079)
+2.Muhammad Zaidan Alfarizi(24060124130102)
+3.Mohammad Sulthon Ariefin(24060124130104)
+4.Rio Setiawan Hastanu Putra (24060124130068)
+
+*/
+
+
 import java.time.Instant;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -30,6 +39,9 @@ public abstract class Account {
     public double getBalance() {
         return this.balance;
     }
+    public List<Transaction> getTransactions() {
+    return this.transactions;
+}
 
 
  
@@ -39,7 +51,8 @@ public abstract class Account {
         }
         balance += amount;
     
-        transactions.add(new Transaction("T" + Instant.now().getEpochSecond(), LocalDate.now(),amount,"Deposit"));
+        transactions.add(new Transaction("T" + Instant.now().getEpochSecond(), LocalDate.now(),amount,"Deposit",this.accountNumber));
+        
     }
 
     public void withdraw(double amount) throws Exception {
@@ -48,8 +61,10 @@ public abstract class Account {
         }
 
         this.balance -= amount;
-        transactions.add(new Transaction("T" + Instant.now().getEpochSecond(), LocalDate.now(),amount,"Withdraw"));
+        transactions.add(new Transaction("T" + Instant.now().getEpochSecond(), LocalDate.now(),amount,"Withdraw",this.accountNumber));
     }
+
+   
     public abstract double calculateInterest();
 
     
