@@ -14,6 +14,13 @@ public class Branch {
             this.address = "";
             this.listCustomer = new ArrayList<>();
         }
+
+        public Branch(String branchCode, String branchName, String address, Customer c){
+            this.branchCode = branchCode;
+            this.branchName = branchName;
+            this.address = address;
+            this.listCustomer.add(c);
+        }
     
         /* Selektor */
         public String getBranchCode(){
