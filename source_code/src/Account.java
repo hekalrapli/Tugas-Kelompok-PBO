@@ -13,9 +13,9 @@ public abstract class Account {
    /*Method */
 
    /*Konstruktor */
-    public Account(){
-
-        
+    public Account(String accountNumber){
+       this.accountNumber = accounNumber;
+       this.balance = 0.0;
     }
     public Account(String accountNumber, double balance){
         this.accountNumber = accountNumber;
